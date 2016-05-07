@@ -49,4 +49,29 @@ describe('App: Angular2Phonecat', () => {
         expect(app.filteredPhones.length).toEqual(2);
     }));
   });
+
+  describe('#order', () => {
+    it('should has default sort to newest',
+      inject([Angular2PhonecatAppComponent], (app: Angular2PhonecatAppComponent) => {
+        expect(app.orderProp).toEqual('age');
+    }));
+
+    it('should able to sort by newest',
+      inject([Angular2PhonecatAppComponent], (app: Angular2PhonecatAppComponent) => {
+        var selectEvent = { target: { value: 'age' } };
+        app.sortPhone(selectEvent);
+
+        expect(app.filteredPhones[0].name).toEqual('Nexus S');
+        expect(app.filteredPhones[1].name).toEqual('Motorola XOOM™ with Wi-Fi');
+    }));
+
+    it('should able to sort by name',
+      inject([Angular2PhonecatAppComponent], (app: Angular2PhonecatAppComponent) => {
+        var selectEvent = { target: { value: 'name' } };
+        app.sortPhone(selectEvent);
+
+        expect(app.filteredPhones[0].name).toEqual('MOTOROLA XOOM™');
+        expect(app.filteredPhones[1].name).toEqual('Motorola XOOM™ with Wi-Fi');
+    }));
+  });
 });

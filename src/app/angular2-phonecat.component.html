@@ -2,6 +2,11 @@
   {{title}}
 </h1>
 Search: <input [(ngModel)]="query" (keyup)="searchPhone()">
+Sort by:
+<select [(ngModel)]="orderProp" (change)="sortPhone($event)">
+  <option value="name">Alphabetical</option>
+  <option value="age">Newest</option>
+</select>
 <ul>
   <li *ngFor="let phone of filteredPhones">
     <span>{{ phone.name }}</span>

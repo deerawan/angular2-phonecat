@@ -11,13 +11,17 @@ export class Angular2PhonecatAppComponent {
   title = 'angular2-phonecat works!';
   phones = [
     {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.'},
+     'snippet': 'Fast just got faster with Nexus S.',
+     'age': 1},
     {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'},
+     'snippet': 'The Next, Next Generation tablet.',
+     'age': 2},
     {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
+     'snippet': 'The Next, Next Generation tablet.',
+     'age': 3}
   ];
   filteredPhones = this.phones;
+  orderProp = 'age';
 
   searchPhone() {
     var newFilteredPhones = [];
@@ -33,5 +37,24 @@ export class Angular2PhonecatAppComponent {
     });
 
     this.filteredPhones = newFilteredPhones;
+  }
+
+  sortPhone(selectEvent) {
+    var newOrderProp = selectEvent.target.value;
+    this.orderProp = newOrderProp;
+
+    var newSortedPhones = this.phones.sort((phone1, phone2) => {
+      if (phone1[newOrderProp] < phone2[newOrderProp]) {
+        return -1;
+      }
+
+      if (phone1[newOrderProp] > phone2[newOrderProp]) {
+        return 1;
+      }
+
+      return 0;
+    });
+
+    this.filteredPhones = newSortedPhones;
   }
 }
