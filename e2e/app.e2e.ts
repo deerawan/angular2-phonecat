@@ -11,4 +11,8 @@ describe('angular2-phonecat App', function() {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('angular2-phonecat works!');
   });
+
+  xit('should filter the phone list as a user types into the search box', () => {
+  });
+
 });

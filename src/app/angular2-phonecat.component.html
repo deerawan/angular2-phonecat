@@ -1,3 +1,10 @@
 <h1>
   {{title}}
 </h1>
+Search: <input [(ngModel)]="query" (keyup)="searchPhone()">
+<ul>
+  <li *ngFor="let phone of filteredPhones">
+    <span>{{ phone.name }}</span>
+    <p>{{ phone.snippet }}</p>
+  </li>
+</ul>
