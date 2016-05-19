@@ -11,7 +11,7 @@ export class PhoneService {
   constructor(private http: Http) {}
 
   getPhones(): Observable<Phone[]> {
-    return this.http.get('public/phones/phones.json')
+    return this.http.get('/app/phones/phones.json')
                     .map(this.extractData)
                     .catch(this.handleError);
   }
@@ -20,8 +20,8 @@ export class PhoneService {
     if (res.status < 200 || res.status >= 300) {
       throw new Error('Response Status: ' + res.status);
     }
-    let body = res.json();
-    return body.data || {};
+
+    return res.json() || {};
   }
 
   private handleError(error: any) {

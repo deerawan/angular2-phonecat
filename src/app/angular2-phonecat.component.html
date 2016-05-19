@@ -9,6 +9,8 @@ Sort by:
 </select>
 <ul>
   <li *ngFor="let phone of filteredPhones">
+    <!--<img [src]="phone.imageUrl" />-->
+    <img src="{{ phone.imageUrl }}" />
     <span>{{ phone.name }}</span>
     <p>{{ phone.snippet }}</p>
   </li>

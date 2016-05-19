@@ -1,27 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HTTP_PROVIDERS }    from '@angular/http';
+import { PhoneService } from './phone.service';
+import { Phone } from './phone';
 
 @Component({
   moduleId: module.id,
   selector: 'angular2-phonecat-app',
   templateUrl: 'angular2-phonecat.component.html',
-  styleUrls: ['angular2-phonecat.component.css']
+  styleUrls: ['angular2-phonecat.component.css'],
+  providers: [
+    HTTP_PROVIDERS,
+    PhoneService
+  ]
 })
-export class Angular2PhonecatAppComponent {
+export class Angular2PhonecatAppComponent implements OnInit {
   query = '';
   title = 'angular2-phonecat works!';
-  phones = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.',
-     'age': 1},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.',
-     'age': 2},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.',
-     'age': 3}
-  ];
-  filteredPhones = this.phones;
   orderProp = 'age';
+  phones: Phone[];
+  filteredPhones: Phone[];
+  errorMessage: string;
+
+  constructor(private phoneService: PhoneService) {}
+
+  ngOnInit() {
+    this.getPhones();
+  }
+
+  getPhones() {
+    this.phoneService.getPhones()
+                     .subscribe(
+                       phones => this.phones = this.filteredPhones = phones,
+                       error => this.errorMessage = <any>error
+                     );
+  }
 
   searchPhone() {
     var newFilteredPhones = [];
