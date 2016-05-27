@@ -5,9 +5,8 @@ import { Phone } from './phone';
 
 @Component({
   moduleId: module.id,
-  selector: 'angular2-phonecat-app',
-  templateUrl: 'angular2-phonecat.component.html',
-  styleUrls: ['angular2-phonecat.component.css'],
+  selector: 'phone-list',
+  templateUrl: 'phone-list.component.html',
   providers: [
     HTTP_PROVIDERS,
     PhoneService
