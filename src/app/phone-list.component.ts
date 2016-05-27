@@ -1,29 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 import { HTTP_PROVIDERS }    from '@angular/http';
 import { PhoneService } from './phone.service';
 import { Phone } from './phone';
-import { PhoneListComponent } from './phone-list.component';
-import { PhoneDetailComponent } from './phone-detail.component';
-
-@Routes([
-  { path: '/phones', component: PhoneListComponent },
-  { path: '/phone/:id', component: PhoneDetailComponent }
-])
 
 @Component({
   moduleId: module.id,
   selector: 'angular2-phonecat-app',
   templateUrl: 'angular2-phonecat.component.html',
   styleUrls: ['angular2-phonecat.component.css'],
-  directives: [ ROUTER_DIRECTIVES ],
   providers: [
     HTTP_PROVIDERS,
-    ROUTER_PROVIDERS,
     PhoneService
   ]
 })
-export class Angular2PhonecatAppComponent implements OnInit {
+export class PhoneListComponent implements OnInit {
   query = '';
   title = 'angular2-phonecat works!';
   orderProp = 'age';
