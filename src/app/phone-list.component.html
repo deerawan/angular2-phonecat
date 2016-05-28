@@ -5,8 +5,9 @@ Sort by:
   <option value="name">Alphabetical</option>
   <option value="age">Newest</option>
 </select>
+<h2 *ngIf="selectedPhone">{{ selectedPhone.name }}</h2>
 <ul>
-  <li *ngFor="let phone of filteredPhones">
+  <li *ngFor="let phone of filteredPhones" (click)="goToDetail(phone)">
     <img src="{{ phone.imageUrl }}" />
     <span>{{ phone.name }}</span>
     <p>{{ phone.snippet }}</p>

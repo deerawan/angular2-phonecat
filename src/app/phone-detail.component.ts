@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteSegment } from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   template: '<h2>Phone Detail</h2>'
 })
 export class PhoneDetailComponent implements OnInit {
-  constructor() { }
+  constructor(
+    private routeSegment: RouteSegment
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    let id = this.routeSegment.getParam('id');
+    console.log('id', id);
+  }
 
 }

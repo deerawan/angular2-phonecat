@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HTTP_PROVIDERS }    from '@angular/http';
+import { Router } from '@angular/router';
 import { PhoneService } from './phone.service';
 import { Phone } from './phone';
 
@@ -17,10 +18,14 @@ export class PhoneListComponent implements OnInit {
   title = 'angular2-phonecat works!';
   orderProp = 'age';
   phones: Phone[];
+  selectedPhone: Phone;
   filteredPhones: Phone[];
   errorMessage: string;
 
-  constructor(private phoneService: PhoneService) {}
+  constructor(
+    private phoneService: PhoneService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getPhones();
@@ -32,6 +37,11 @@ export class PhoneListComponent implements OnInit {
                        phones => this.phones = this.filteredPhones = phones,
                        error => this.errorMessage = <any>error
                      );
+  }
+
+  goToDetail(phone: Phone) {
+    let link = ['/phone', phone.id];
+    this.router.navigate(link);
   }
 
   searchPhone() {
