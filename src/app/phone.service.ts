@@ -16,6 +16,12 @@ export class PhoneService {
                     .catch(this.handleError);
   }
 
+  getPhone(id): Observable<Phone> {
+    return this.http.get('/app/phones/' + id + '.json')
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
+
   private extractData(res: Response) {
     if (res.status < 200 || res.status >= 300) {
       throw new Error('Response Status: ' + res.status);

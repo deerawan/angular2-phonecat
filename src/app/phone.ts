@@ -5,4 +5,9 @@ export class Phone {
   imageUrl: string;
   carrier: string;
   snippet: string;
+  description: string;
+  connectivity: {
+    bluetooth: string,
+    cell: string
+  }
 }
