@@ -6,7 +6,8 @@ import { PhoneService } from './phone.service';
 @Component({
   moduleId: module.id,
   selector: 'phone',
-  template: '<h2>Phone Detail</h2>'
+  templateUrl: 'phone-detail.component.html',
+  styleUrls: ['phone-detail.component.css']
 })
 export class PhoneDetailComponent implements OnInit {
   phone: Phone;

@@ -8,6 +8,7 @@ export class Phone {
   description: string;
   connectivity: {
     bluetooth: string,
-    cell: string
+    cell: string,
+    gps: number
   }
 }
