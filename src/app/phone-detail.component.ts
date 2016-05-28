@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { RouteSegment } from '@angular/router';
 import { Phone } from './phone';
 import { PhoneService } from './phone.service';
+import { CheckmarkPipe } from './checkmark.pipe';
 
 @Component({
   moduleId: module.id,
   selector: 'phone',
   templateUrl: 'phone-detail.component.html',
-  styleUrls: ['phone-detail.component.css']
+  styleUrls: ['phone-detail.component.css'],
+  pipes: [CheckmarkPipe]
 })
 export class PhoneDetailComponent implements OnInit {
   phone: Phone;
