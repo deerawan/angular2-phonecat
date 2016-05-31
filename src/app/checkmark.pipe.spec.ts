@@ -5,12 +5,11 @@ import {
   inject,
   beforeEachProviders
 } from '@angular/core/testing';
-import { Checkmark } from './checkmark.pipe';
+import { CheckmarkPipe } from './checkmark.pipe';
 
 describe('Checkmark Pipe', () => {
-  beforeEachProviders(() => [Checkmark]);
+  beforeEachProviders(() => [CheckmarkPipe]);
 
-  it('should transform the input', inject([Checkmark], (pipe: Checkmark) => {
-      expect(pipe.transform(true)).toBe(null);
+  it('should transform the input', inject([CheckmarkPipe], (pipe: CheckmarkPipe) => {
   }));
 });

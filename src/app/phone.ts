@@ -11,4 +11,5 @@ export class Phone {
     cell: string,
     gps: number
   }
+  images: string[];
 }

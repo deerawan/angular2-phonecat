@@ -13,6 +13,7 @@ import { CheckmarkPipe } from './checkmark.pipe';
 })
 export class PhoneDetailComponent implements OnInit {
   phone: Phone;
+  mainImageUrl: string;
   errorMessage: string;
 
   constructor(
@@ -22,12 +23,18 @@ export class PhoneDetailComponent implements OnInit {
 
   ngOnInit() {
     let id = this.routeSegment.getParam('id');
-    console.log('id', id);
     this.phoneService.getPhone(id)
                      .subscribe(
-                       phone => this.phone = phone,
+                       phone => {
+                         this.phone = phone;
+                         this.mainImageUrl = phone.images[0];
+                       },
                        error => this.errorMessage = <any>error
                      )
+  }
+
+  setImage(imageUrl) {
+    this.mainImageUrl = imageUrl;
   }
 
 }

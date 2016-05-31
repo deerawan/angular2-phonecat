@@ -1,13 +1,13 @@
 <div *ngIf="phone">
-  <img src="{{ phone.images[0] }}" class="phone" />
+  <img src="{{ mainImageUrl }}" class="phone" />
 
   <h1>{{ phone.name }}</h1>
 
   <p>{{ phone.description }}</p>
 
   <ul class="phone-thumbs">
-    <li *ngFor="let img of phone.images">
-      <img src="{{ img }}" />
+    <li *ngFor="let imageUrl of phone.images">
+      <img src="{{ imageUrl }}" (click)="setImage(imageUrl)" />
     </li>
   </ul>
 
