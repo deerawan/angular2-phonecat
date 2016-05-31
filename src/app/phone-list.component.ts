@@ -11,7 +11,6 @@ import { Phone } from './phone';
 })
 export class PhoneListComponent implements OnInit {
   query = '';
-  title = 'angular2-phonecat works!';
   orderProp = 'age';
   phones: Phone[];
   selectedPhone: Phone;

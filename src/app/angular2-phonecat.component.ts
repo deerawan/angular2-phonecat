@@ -25,7 +25,7 @@ import { PhoneDetailComponent } from './phone-detail.component';
 })
 
 export class Angular2PhonecatAppComponent implements OnInit {
-  title = 'angular2-phonecat works!';
+  title = 'Angular2 PhoneCat';
 
   constructor(
     private phoneService: PhoneService,

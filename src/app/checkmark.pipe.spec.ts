@@ -11,5 +11,6 @@ describe('Checkmark Pipe', () => {
   beforeEachProviders(() => [CheckmarkPipe]);
 
   it('should transform the input', inject([CheckmarkPipe], (pipe: CheckmarkPipe) => {
+      expect(pipe.transform(true, 'true')).toBe('\u2713');
   }));
 });
