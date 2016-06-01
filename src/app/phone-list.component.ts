@@ -7,7 +7,8 @@ import { Phone } from './phone';
 @Component({
   moduleId: module.id,
   selector: 'phone-list',
-  templateUrl: 'phone-list.component.html'
+  templateUrl: 'phone-list.component.html',
+  styleUrls: ['phone-list.component.css']
 })
 export class PhoneListComponent implements OnInit {
   query = '';
