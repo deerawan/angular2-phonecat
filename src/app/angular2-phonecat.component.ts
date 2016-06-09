@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 import { HTTP_PROVIDERS }    from '@angular/http';
+import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { PhoneService } from './phone.service';
 import { Phone } from './phone';
 import { PhoneListComponent } from './phone-list.component';
@@ -16,7 +17,10 @@ import { PhoneDetailComponent } from './phone-detail.component';
   selector: 'angular2-phonecat-app',
   templateUrl: 'angular2-phonecat.component.html',
   styleUrls: ['angular2-phonecat.component.css'],
-  directives: [ ROUTER_DIRECTIVES ],
+  directives: [
+    ROUTER_DIRECTIVES,
+    MD_CARD_DIRECTIVES,
+  ],
   providers: [
     HTTP_PROVIDERS,
     ROUTER_PROVIDERS,

@@ -1,13 +1,8 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">{{ title }}</span>
-    </div>
-  </header>
-  <main class="phonecat-content mdl-layout__content">
-    <div class="mdl-layout__tab-panel is-active">
-      <router-outlet></router-outlet>
-    </div>
+<div>
+  <md-toolbar color="primary">
+    {{ title }}
+  </md-toolbar>
+  <main>
+    <router-outlet></router-outlet>
   </main>
 </div>

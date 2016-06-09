@@ -12,7 +12,7 @@ module.exports = function(defaults) {
       'reflect-metadata/*.js',
       'rxjs/**/*.js',
       '@angular/**/*.js',
-      'material-design-lite/**/*.*'
+      '@angular2-material/**/*'
     ]
   });
 };
