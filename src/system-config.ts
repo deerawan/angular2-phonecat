@@ -14,6 +14,8 @@ const materialPkgs:string[] = [
   'core',
   'button',
   'card',
+  'toolbar',
+  'input'
 ];
 
 materialPkgs.forEach((pkg) => {

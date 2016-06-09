@@ -3,12 +3,18 @@ import { HTTP_PROVIDERS }    from '@angular/http';
 import { Router } from '@angular/router';
 import { PhoneService } from './phone.service';
 import { Phone } from './phone';
+import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
+import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 
 @Component({
   moduleId: module.id,
   selector: 'phone-list',
   templateUrl: 'phone-list.component.html',
-  styleUrls: ['phone-list.component.css']
+  styleUrls: ['phone-list.component.css'],
+  directives: [
+    MD_CARD_DIRECTIVES,
+    MD_INPUT_DIRECTIVES
+  ]
 })
 export class PhoneListComponent implements OnInit {
   query = '';

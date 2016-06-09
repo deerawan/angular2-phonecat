@@ -1,16 +1,13 @@
-<form action="#">
+<!--<form action="#">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" [(ngModel)]="query" (keyup)="searchPhone()">
     <label class="mdl-textfield__label" for="search">Search</label>
   </div>
-</form>
+</form>-->
 
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" id="sample3">
-    <label class="mdl-textfield__label" for="sample3">Text...</label>
-  </div>
-</form>
+<md-input [(ngModel)]="query" (keyup)="searchPhone()" placeholder="Search"></md-input>
+<!--<md-input #query placeholder="Search" (keyup)="searchPhone()"></md-input>-->
+<!--<input class="mdl-textfield__input" type="text" [(ngModel)]="query" (keyup)="searchPhone()">-->
 
 Sort by:
 <select [(ngModel)]="orderProp" (change)="sortPhone($event)">
@@ -18,17 +15,16 @@ Sort by:
   <option value="age">Newest</option>
 </select>
 <h2 *ngIf="selectedPhone">{{ selectedPhone.name }}</h2>
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp"
-       *ngFor="let phone of filteredPhones" (click)="goToDetail(phone)">
-    <div class="mdl-card__media">
+<div id="phone-list">
+  <md-card *ngFor="let phone of filteredPhones" (click)="goToDetail(phone)">
+    <div>
       <img src="{{ phone.imageUrl }}" />
     </div>
-    <div class="mdl-card__title">
-      <h4 class="mdl-card__title-text">{{ phone.name }}</h4>
+    <div>
+      <h4>{{ phone.name }}</h4>
     </div>
-    <div class="mdl-card__supporting-text">
-      <span class="mdl-typography--font-light mdl-typography--subhead">{{ phone.snippet }}</span>
+    <div>
+      <span>{{ phone.snippet }}</span>
     </div>
-  </div>
+  </md-card>
 </div>
