@@ -5,6 +5,7 @@ import { PhoneService } from './phone.service';
 import { Phone } from './phone';
 import { PhoneListComponent } from './phone-list.component';
 import { PhoneDetailComponent } from './phone-detail.component';
+import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 
 @Routes([
   { path: '/phones', component: PhoneListComponent },
@@ -18,6 +19,7 @@ import { PhoneDetailComponent } from './phone-detail.component';
   styleUrls: ['angular2-phonecat.component.css'],
   directives: [
     ROUTER_DIRECTIVES,
+    MD_TOOLBAR_DIRECTIVES
   ],
   providers: [
     HTTP_PROVIDERS,
