@@ -29,7 +29,7 @@ import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 })
 
 export class Angular2PhonecatAppComponent implements OnInit {
-  title = 'Angular2 PhoneCat';
+  title = 'Angular 2 PhoneCat';
 
   constructor(
     private phoneService: PhoneService,
