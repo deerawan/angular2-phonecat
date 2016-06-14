@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteSegment } from '@angular/router';
-import { Phone } from './shared/phone.model';
-import { PhoneService } from './shared/phone.service';
-import { CheckmarkPipe } from './checkmark.pipe';
+import { Phone } from '../shared/phone.model';
+import { PhoneService } from '../shared/phone.service';
+import { CheckmarkPipe } from '../checkmark.pipe';
 
 @Component({
   moduleId: module.id,
