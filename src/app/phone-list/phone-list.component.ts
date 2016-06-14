@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HTTP_PROVIDERS }    from '@angular/http';
 import { Router } from '@angular/router';
-import { PhoneService } from './phone.service';
-import { Phone } from './phone';
+import { PhoneService } from '../shared/phone.service';
+import { Phone } from '../shared/phone.model';
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 

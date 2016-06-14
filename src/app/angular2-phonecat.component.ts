@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 import { HTTP_PROVIDERS }    from '@angular/http';
-import { PhoneService } from './phone.service';
-import { Phone } from './phone';
-import { PhoneListComponent } from './phone-list.component';
+import { PhoneService } from './shared/phone.service';
+import { Phone } from './shared/phone.model';
+import { PhoneListComponent } from './phone-list/phone-list.component';
 import { PhoneDetailComponent } from './phone-detail.component';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 

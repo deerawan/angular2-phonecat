@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteSegment } from '@angular/router';
-import { Phone } from './phone';
-import { PhoneService } from './phone.service';
+import { Phone } from './shared/phone.model';
+import { PhoneService } from './shared/phone.service';
 import { CheckmarkPipe } from './checkmark.pipe';
 
 @Component({
