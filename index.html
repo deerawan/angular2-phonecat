@@ -7,7 +7,7 @@
   <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="angular2-phonecat/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- Service worker support is disabled by default.
@@ -25,13 +25,13 @@
 <body>
   <angular2-phonecat-app>Loading...</angular2-phonecat-app>
 
-  <script src="/vendor/es6-shim/es6-shim.js"></script>
-  <script src="/vendor/reflect-metadata/Reflect.js"></script>
-  <script src="/vendor/systemjs/dist/system.src.js"></script>
-  <script src="/vendor/zone.js/dist/zone.js"></script>
+  <script src="angular2-phonecat/vendor/es6-shim/es6-shim.js"></script>
+  <script src="angular2-phonecat/vendor/reflect-metadata/Reflect.js"></script>
+  <script src="angular2-phonecat/vendor/systemjs/dist/system.src.js"></script>
+  <script src="angular2-phonecat/vendor/zone.js/dist/zone.js"></script>
 
   <script>
-    System.import('system-config.js').then(function () {
+    System.import('angular2-phonecat/system-config.js').then(function () {
       System.import('main');
     }).catch(console.error.bind(console));
   </script>
