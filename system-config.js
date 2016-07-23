@@ -3,7 +3,7 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 var map = {
-    '@angular2-material': 'vendor/@angular2-material'
+    '@angular2-material': 'angular2-phonecat/vendor/@angular2-material'
 };
 /** User packages configuration. */
 var packages = {};
@@ -43,9 +43,9 @@ barrels.forEach(function (barrelName) {
 // Apply the CLI SystemJS configuration.
 System.config({
     map: {
-        '@angular': 'vendor/@angular',
-        'rxjs': 'vendor/rxjs',
-        'main': 'main.js'
+        '@angular': 'angular2-phonecat/vendor/@angular',
+        'rxjs': 'angular2-phonecat/vendor/rxjs',
+        'main': 'angular2-phonecat/main.js'
     },
     packages: cliSystemConfigPackages
 });
