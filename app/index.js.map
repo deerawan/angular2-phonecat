@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,4BAA0B,eAAe,CAAC;AAAlC,gDAAkC;AAC1C,4CAA2C,+BAA+B,CAAC;AAAnE,kGAAmE","sourcesContent":["export {environment} from './environment';\nexport {Angular2PhonecatAppComponent} from './angular2-phonecat.component';\n"]}
