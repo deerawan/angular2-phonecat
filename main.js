@@ -4,7 +4,7 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var http_1 = require('@angular/http');
 var common_1 = require('@angular/common');
-var _1 = require('./app/');
+var _1 = require('app/');
 if (_1.environment.production) {
     core_1.enableProdMode();
 }
